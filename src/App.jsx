@@ -1,4 +1,5 @@
-import './styles.scss';
+import { useState } from "react"
+import "./styles.scss"
 
 /*
   DESAFIO TÉCNICO - JOGO DA VELHA - por fernandev
@@ -16,13 +17,20 @@ import './styles.scss';
 */
 
 function App() {
+  const [gameData, setGameData] = useState([0, 0, 0, 0, 0, 0, 0, 0, 0])
+
+  const handleClick = () => {
+    console.log('Clicked')
+  }
   return (
     <>
-      <h3>desafio fernandev</h3>
-      <h1>jogo da velha</h1>
-      <div className='board-game'></div>
+      <div className="board-game">
+        {gameData.map((value) =>(
+          <span onClick={handleClick}>{value}</span>
+        ))}
+      </div>
     </>
-  );
+  )
 }
 
-export default App;
+export default App
