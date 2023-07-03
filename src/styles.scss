@@ -27,9 +27,65 @@ body {
     justify-content: center;
     color: #333;
     font-size: 30px;
+    position: relative;
+    outline: 1px solid #ccc;
     &:hover {
       background: #f6f6f6;
       cursor: pointer;
     }
+
+    &::after {
+      content: "";
+      display: none;
+      width: 180%;
+      height: 8px;
+      background: #000;
+      position: absolute;
+      z-index: 100;
+    }
+
+    &.vertical {
+      &::after {
+        display: block;
+        rotate: 90deg;
+      }
+    }
+    &.horizontal {
+      &::after {
+        display: block;
+      }
+    }
+
+    &.diagonal-1 {
+      &::after {
+        display: block;
+        rotate: 45deg;
+      }
+    }
+
+    &.diagonal-2 {
+      &::after {
+        display: block;
+        rotate: 135deg;
+      }
+    }
+    abbr {
+      font-size: 20px;
+      color: rgb(0, 0, 0, 0.5);
+      position: absolute;
+      top: 10px;
+      left: 10px;
+    }
+  }
+}
+
+.game-area {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  button {
+    margin-top: 20px;
+    padding: 4px;
   }
 }
