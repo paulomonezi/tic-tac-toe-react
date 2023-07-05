@@ -9,7 +9,7 @@
 <br>
 
 #### 🌎 _Languages:_ 
--  Também disponível em pt-BR 👉 <a href="PLACEHOLDER" target="_blank">Aqui</a>
+-  Também disponível em pt-BR 👉 <a href="https://github.com/paulomonezi/tic-tac-toe-react/blob/main/READMEptBR.md" target="_blank">Aqui</a>
 
 <br>
 
